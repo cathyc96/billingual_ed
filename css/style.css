@@ -1,0 +1,268 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 9vmin;
+  text-align: center;
+}
+
+h2,
+.pullquote,
+.back-to-observer,
+.quote-text {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 4vmin;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  background-color: rgba(231, 79, 4, 0.82);
+
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
+
+  cursor: pointer;
+}
+
+iframe {
+  width: 450px;
+}
+
+article {
+  background-color: #EBEBEB;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+article p {
+  text-indent: 2rem;
+  line-height: 1.5;
+}
+
+.no-indent {
+  text-indent: 0;
+}
+
+footer {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.vertically-center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bounded-width {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1rem;
+  background-color: #EBEBEB;
+}
+
+.pullquote {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-top: solid .25rem;
+  border-bottom: solid .25rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+
+.map-container {
+  height: 100vh;
+  overflow: hidden;
+  margin: 2rem 0;
+
+}
+
+.person-container {
+  width: 900px;
+  max-width: 100%;
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.person-container.right,
+.person-container.left {
+  flex-wrap: nowrap;
+}
+
+.audio-quote {
+  max-width: 450px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+.person-info {
+  padding-bottom: 0.5rem;
+  border-bottom: solid .25rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.quote-text {
+  margin-top: 0.5rem;
+  text-align: inherit;
+}
+
+#mapCanvas {
+  display:block;
+  margin-left:250px;
+  margin-right:500px;
+  height: 100%;
+  width: auto;
+  position: relative;
+  left: 100%;
+  transform: translate(-50%, 0%);
+}
+
+.soundcloud {
+  max-width: 450px;
+  width: 100%;
+  height: 450px;
+  margin: 0 auto;
+}
+
+.soundcloud img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.scroll-map,
+.scroll-article {
+  position: fixed;
+  left: 0;
+  z-index: 95;
+  margin: 0.5rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
+}
+
+.scroll-article {
+  bottom: 0rem;
+}
+
+.scroll-map {
+  bottom: 2rem;
+}
+
+.scroll-article h2,
+.scroll-map h2 {
+  font-size: 1.25rem;
+  margin: 0rem;
+  text-align: left
+}
+
+@media (max-width: 900px) {
+  .person-container {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .audio-quote {
+    max-width: 450px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .person-container.right {
+    flex-wrap: wrap-reverse;
+  }
+
+  .person-container.left {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-aspect-ratio: 1706/960) { /*dims of map img*/
+  #mapCanvas {
+    height: 100%;
+    width: auto;
+    position: relative;
+    left: 23%;
+    transform: translate(-23%, 0%);
+  }
+
+  .scroll-map,
+  .scroll-article {
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-aspect-ratio: 1706/960) { /*dims of map img*/
+  #mapCanvas {
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 30%;
+    left: 0;
+    transform: translate(0%, -30%);
+  }
+}
